@@ -1,16 +1,58 @@
 /* style.css */
 
 /* Responsive Banner */
-.responsive_banner img {
-    width: auto;
-    height:25vh;
-    min-height:100px;
-    max-height: 400px;
-  }
+
 .responsive_banner{
-  background-color: rgb(191, 230, 253);
-  align-content: center;
+  display: flex;
+  background-color: black;
+  background-size: auto 100%;
+  background-position: center bottom, calc(50% + 100px) 0;
+  background-repeat: no-repeat,repeat-x;
+  width: 100vw;
+  max-width: 100%;
+  height: 300px;
+  background-image: url(images/logo.png),url(images/banner.png);
+  background-size: 100px;
+  background-size: auto, cover;
+  
 }
+
+.div-with-logo {
+  /* Set the size of your div - adjust as necessary */
+  width: 100vw;
+  height: 300px;
+
+  /* Set the logo background */
+ 
+  
+  /* Ensures the child div takes full size of the parent div */
+  display: flex;
+ 
+}
+
+.div-with-scrolling-background {
+  /* The div takes up full available space */
+  flex-grow: 1;
+
+  /* Set the repeating background */
+  background: url('images/banner.png') repeat calc(50% + 100px) 0 / cover;
+  background-color: #FDF1E7;
+  
+  /* Set up the animation for the repeating background */
+  animation: scroll-left 100s linear infinite;
+
+  
+
+
+}
+
+/* Define the scroll-left animation */
+@keyframes scroll-left {
+  from { background-position: 3526px; }
+  to { background-position: -3526px; }
+}
+
+
   
   /* Commission Ad */
   .commission_ad {
